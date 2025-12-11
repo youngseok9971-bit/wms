@@ -1,0 +1,85 @@
+/* 모든 요소 기본 여백 제거 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column; /* 세로 방향 정렬 */
+    min-height: 100vh;      /* 화면 꽉 채우기 */
+    font-family: Arial, sans-serif;
+}
+
+header {
+    height: 70px;
+    background-color: purple;
+    display: flex;
+    justify-content: center; /* 가로 중앙 */
+    align-items: center;     /* 세로 중앙 */
+    font-size: 30px;
+    color: white;
+}
+
+menu ul {
+    display: flex;
+    list-style: none;
+    height: 40px;
+    background-color: skyblue;
+    color: blue;
+    justify-content: space-around;
+    align-items: center;      /* 세로 중앙 */
+}
+
+main {
+    flex: 1;                /* 남은 공간을 main이 차지 */
+    padding: 20px;
+    background-color: beige;
+}
+
+.company{
+    text-align: center;
+    margin-bottom: 70px; /* 아래 여백 */
+}
+
+.ncs{
+    text-align: center;
+    margin-bottom: 200px; /* 아래 여백 */
+}
+
+.ncs-content {
+    text-align: center;
+}
+
+footer {
+    height: 80px;
+    background-color: darkblue;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===== 위에는 사이트 기본 세팅 ===== */
+
+.title{
+    text-align: center;
+     margin-bottom: 160px; /* 아래 여백 */
+}
+
+.table {
+    width: 50%;             /* 테이블 폭 80% */
+    margin: 20px auto;      /* 상하 20px 여백, 좌우 가운데 정렬 */
+    border-collapse: collapse; /* 테두리 겹침 제거 */
+    font-size: 18px;        /* 글자 크기 키우기 */
+    text-align: center;     /* 내용 가운데 정렬 */
+}
+
+.right {
+    text-align: right;
+}
+
+.left{
+    text-align: left;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeLeaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>물류 창고 입출고 프로그램</title>
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+    <body>
+        <header>물류 창고 입출고 프로그램</header>
+        <menu>
+            <ul>
+                <li><a href="/product">제품조회</a></li>
+				<li><a href="/stock">입출고등록</a></li>
+				<li><a href="/history">입출고내역조회</a></li>
+				<li><a href="/profit">출고매출이익</a></li>
+				<li><a href="/">홈으로</a></li>
+            </ul>
+        </menu>
+        <main>
+            <h2 class="title">제품 조회</h2>
+            
+            <table class="table" border="1">
+                <tr>
+                    <th>제품코드</th>
+                    <th>제품명</th>
+                    <th>사이즈</th>
+                    <th class="right">매입단가</th>
+                    <th class="right">출고단가</th>
+                </tr>
+                <tr th:each="p : ${list}">
+					<td th:text="${p.product_code}"></td>
+					<td th:text="${p.product_name}"></td>
+					<td th:text="${p.product_size}"></td>
+					<td class="right" th:text="${p.product_incost}"></td>
+					<td class="right" th:text="${p.product_outcost}"></td>
+                </tr>
+                <tr>
+                	<td colspan="3">합계</td>
+					<td class="right" th:text="${totalIn}"></td>
+					<td class="right" th:text="${totalOut}"></td>                
+                </tr>
+            </table>
+        </main>
+        <footer>
+            copyright &copy; 2024 KOREA INFORMATION TECHNOLOGY ACADEMY. ALL RIGHTS RESERVED
+        </footer>
+        
+        <script src="js/script.js"></script>
+    </body>
+</html>
