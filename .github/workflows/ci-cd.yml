@@ -77,7 +77,7 @@ jobs:
           script: |
              set -e
              cd ~/wms-docker
-             cp build/libs/$JAR_FILE ./$JAR_FILE
+             cp build/libs/wms-0.0.1-SNAPSHOT.jar ./wms-0.0.1-SNAPSHOT.jar
              docker compose down
              docker compose up -d --build
              docker ps
